@@ -1,0 +1,12 @@
+{
+  "name": "StickNotes",
+  "displayName": "StickNotes",
+  "expo": {
+    "name": "StickNotes",
+    "slug": "StickNotes",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
