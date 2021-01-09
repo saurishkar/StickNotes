@@ -1,26 +1,29 @@
 import React from "react";
 import { Text, View, Button, StyleSheet } from "react-native";
+import { Card, Paragraph } from "react-native-paper";
 
 import ButtonView from "./buttons/ButtonView";
 
-const Note = ({ title, description, deleteNote, markCompleteNote, archiveNote }) => {
+const Note = ({ id, title, description, deleteNote, markCompleteNote, archiveNote }) => {
   return <View style={styles.noteContainer}>
-    <View style={styles.noteBody}>
-      <Text style={styles.noteTitle}>{title}</Text>
-      <Text style={styles.noteDescription}><i>{description}</i></Text>
-    </View>
-    <View style={styles.noteActions}>
-      <ButtonView title="Mark as complete" type="primary" onPress={markCompleteNote} />
-      <ButtonView title="Delete" type="danger" onPress={deleteNote} />
-      <ButtonView title="Archive" type="warning" onPress={archiveNote} />
-    </View>
+    <Card>
+      <Card.Title title={title} />
+      <Card.Content>
+        <Paragraph>
+          {description}
+        </Paragraph>
+      </Card.Content>
+      <Card.Actions>
+        <ButtonView type="primary" onPress={() => console.log("complete")}><small>Mark as complete</small></ButtonView>
+        <ButtonView type="danger" onPress={() => deleteNote(id)}><small>Delete</small></ButtonView>
+        <ButtonView type="warning" onPress={() => console.log("archived")}><small>Archive</small></ButtonView>
+      </Card.Actions>
+    </Card>
   </View>
 }
 
 const styles = StyleSheet.create({
   noteContainer: {
-    border: "1px solid black",
-    padding: "5px",
     margin: "20px",
   },
   noteBody: {

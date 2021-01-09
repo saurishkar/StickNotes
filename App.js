@@ -1,24 +1,25 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
+import { Provider as PaperProvider } from 'react-native-paper';
+
 import { StyleSheet, Text, View } from 'react-native';
 
 import Home from "./screens/Home";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Stick your notes</Text>
-      <StatusBar style="auto" />
-      <Home />
-    </View>
+    <PaperProvider>
+      <View style={styles.container}>
+        <StatusBar style="auto" />
+        <Home />
+      </View>
+    </PaperProvider>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
     justifyContent: 'center',
   },
 });
