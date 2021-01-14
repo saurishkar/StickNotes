@@ -56,11 +56,11 @@ const styles = StyleSheet.create({
     margin: "auto"
   },
   noteList: {
-    display: "inline-flex",
+    display: "flex",
     maxWidth: "100%"
   },
   createBtn: {
-    display: "block",
+    display: "flex",
     maxWidth: "40px"
   }
 })

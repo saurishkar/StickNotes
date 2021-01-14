@@ -22,6 +22,6 @@ const styles = StyleSheet.create({
     marginBottom: "5px"
   },
   formField: {
-    display: "block"
+    display: "flex"
   }
 });

@@ -36,11 +36,8 @@ const styles = StyleSheet.create({
   },
   noteTitle: {
     fontWeight: "bold",
-    display: "block"
   },
   noteDescription: {
-    fontStyle: "",
-    display: "block"
   }
 });
 
